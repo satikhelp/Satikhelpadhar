@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhar genrate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+    <!-- jQuery Library (required for the QR code plugin) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- QR Code Generator (jQuery QR Code Plugin) -->
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+<!-- html2pdf.js Library (for generating PDF) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+<style>
+.download-bt {
+    background-color: #ff0a00; /* Green */
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+    </style>
+<body>
+    
+    <br>
+        <nav id="navv">
+
+        <ul>
+            <li><a href="adhar.html" class="download-btn">
+        Adhar Card
+    </a></li>
+            <li><a href="pan.html" class="download-btn">
+        Pan Card
+    </a></li>
+              </ul>
+         </nav>
+         
+    <!-- <h2 id="enteradhadetails" >Enter Adhar Details</h2> -->
+    <br>
+    <h1 align="center" <span style="color: white;">🇮🇳 Welcome 🇮🇳</span>
+</h1>
+    <form action="" id="fromC">
+        <div class="main_div" id="md">
+            <div class="sub_container">
+                <div class="from_container">
+                    <div class="from1">
+                        <div class="form-group">
+                            <label for="aadhaar-card-no">Aadhaar Number <span style="color: red;">*</span></label>
+                            <input type="text" id="aadhaar-card-no" name="aadhaar-card-no"
+                                placeholder="Aadhar No..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="house-no">House No <span style="color: red;">*</span></label>
+                            <input type="text" id="house-no" name="house-no" placeholder="House No" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="state">State <span style="color: red;">*</span></label>
+                            <input type="text" id="state" name="state" placeholder="State" required>
+                        </div>
+
+
+
+                    </div>
+                    <div class="from2">
+
+
+                        <div class="form-group">
+                            <label for="name">Name <span style="color: red;">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Full Naam" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="locality">Gali, Locality <span style="color: red;">*</span></label>
+                            <input type="text" id="locality" name="locality" placeholder="Gali, Locality,"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-office">Post Office <span style="color: red;">*</span></label>
+                            <input type="text" id="post-office" name="post-office" placeholder="Post Office" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City <span style="color: red;">*</span></label>
+                            <input type="text" id="city" name="city" placeholder="City" required>
+                        </div>
+
+                    </div>
+                    <div class="from3">
+
+                        <div class="form-group">
+                            <label for="father-name" id="chng_ff">Father Name <span style="color: red;">*</span></label>
+                            <input type="text" id="father-name" name="father-name" placeholder="Full Naam"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="relation">Relation <span style="color: red;">*</span></label>
+                            <select id="relation" name="relation" required>
+                                <option value="" disabled selected>Select Relation</option>
+                                <option value="S/O">Son of (S/O)</option>
+                                <option value="D/O">Daughter of (D/O)</option>
+                                <option value="H/O">Husband of (H/O)</option>
+                                <option value="W/O">Wife of (W/O)</option>
+                                <option value="M/O">Mother of (M/O)</option>
+                                <option value="F/O">Father of (F/O)</option>
+                                <option value="G/O">Guardian of (G/O)</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode <span style="color: red;">*</span></label>
+                            <input type="number" id="pincode" name="pincode" placeholder="pincode" required>
+                        </div>
+                    </div>
+                    <div class="from4">
+                        <div class="form-group">
+                            <label for="date-of-birth">Date of Birth <span style="color: red;">*</span></label>
+                            <input type="date" id="date-of-birth" name="date-of-birth" placeholder="26/07/1992"
+                                required>
+                        </div>
+                        <div class="gender_class">
+                            <label for="gender">Select Gender <span style="color: red;">*</span></label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" name="address"
+                                placeholder="S/O: Full Address "
+                                required></textarea>
+                        </div>
+                    </div>
+                    <div class="from5">
+
+                        <div class="form-group">
+                            <label for="image">Select Image <span style="color: red;">*</span></label>
+                            <input type="file" id="image" name="image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="local_dob">Date of birth Local</label>
+                            <input type="text" id="local_dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Gendar_local">Gendar Local</label>
+                            <input type="text" id="Gendar_local" required>
+                        </div>
+                    </div>
+                    <div class="from6">
+                        
+                        <div class="form-group">
+                            <label for="name-local-language">Name (Local Language)</label>
+                            <input type="text" id="name-local-language" name="name-local-language"
+                                placeholder="Name (Local Language)" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="address-local-language">Address (Local Language)</label>
+                            <textarea id="address-local-language" name="address-local-language"
+                                placeholder="Address (Local Language)" required></textarea>
+                        </div>
+                    </div>
+<div class="from7">
+    <div class="form-group">
+        <label for="local-language">Select Local Language</label>
+        <select id="local-language" name="local-language" required>
+            <option value="option1">Hindi</option>
+        </select>
+    </div>
+
+
+</div>
+
+<div class="from8">
+    <button type="reset" id="clear">Clear</button>
+</div>
+<div class="form-group flex_around"> 
+    <button type="submit" id="submit">Generate</button>
+</div> 
+    </form>
+    </div>
+
+    </div>
+    
+    </div>
+
+    <!-- show -->
+
+    <div class="adhar_display" id="ff">
+        <div class="adhar_card_show_div"  id="maint">
+
+            <div class="adhar  " id="d_adhar">
+
+<div class="data_structer" id="dwn" >
+    
+    <img src="adhar bg.png" id="adhardemo_img" alt="">
+
+<div class="show_data_sturcter">
+    <div class="adhar_top_details_div">
+        <div id="aadhaarCard_top_info">
+            <div class="adjust_info">
+
+
+
+        <p id="enrollment_no">नामांकन क्रम / Enrollment No: </p>
+<div class="details_top_show">
+    <p>To</p>
+    <p id="fullName_show_hindi">सुरेंद्र सिंह</p> <!-- Full Name -->
+    <p id="englishName">Surendra Singh</p> <!-- English Name -->
+    <p id="address_show">
+    </p>
+        <div class="signature_text">
+                </div>
+                </div>
+<div class="top_bottom_details">
+                
+    <!-- <img src=""  id="qr_show"  alt=""> -->
+     <div id="qr_show"></div>
+     </div>
+
+<div class="show_n">
+    <h2 id="adhar_number_show_big"></h2>
+</div>
+<div class="adhar_number_show_div">
+<div class="main_adhar_front">
+    <div class="pic">
+<img src="./images/man.jpg" id="img_show" alt="">
+    </div>
+    <div class="details_adhar_front">
+        <p id="name_show_main_adhar_front_hindi" >सुरेंद्र सिंह</p>
+        <p id="name_show_main_adhar_front_english" >Surendra Singh</p>
+        <p id="dob_show_main_front_adhar">जन्म तिथि / DOB : 6/05/1992</p>
+        <p id="gnder_show_main_adhar_front" > <span id="hindi_g">पुरुष </span> / <span id="eng_g">Male</span></p>
+    </div>
+    <div id="first_page_qr">
+    </div>
+    <div class="adhar_front_number">
+        <h2 id="adhar_number_show_front"></h2>
+    </div>
+        </div>
+           </div>
+               </div>
+                   </div>
+                      </div>
+                  <div class="secend_side_adhar">
+                <div class="secend_side_details">
+             <div class="addres_in_secend"> 
+          <div class="divv">
+                    <p class="bold" >पता: </p>
+                    <p id="hindi_addres"> 
+                    </p>
+                </div>
+<div class="ad_magin">
+    <p class="bold" >Address:</p>      
+    <p id="english_addres">  </p>
+    
+</div>
+                   </div> 
+
+<div class="last-adharNum_show">
+    <h2 id="last_adhar_number_show"></h2>
+
+</div>
+
+<div id="final_qr_show">
+    
+</div>
+                </div>
+            </div>
+        </div>
+
+            </div>
+</div>
+    </div>
+    <div class="arrow">
+        <img src="arrow.png" id="arrow_icon" alt="">
+    </div>
+    <div class="downlode_div">
+        <button id="edit_btn">Edit</button>
+        <button id="downlode_btn">
+            <span id="spinner" class="spinner" style="display: none;"></span>
+            <span id="buttonText">Download Now</span>
+        </button>
+    </div>
+    </div>
+<!-- QR Code generation library CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+    <script src="script.js"></script>
+    <script src="adhar.js"></script>
+</body>
+</html>
+
+
+

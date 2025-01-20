@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raisty/OCR-B@1.1/dist/ocrb.css" integrity="sha384-{hash}" crossorigin="anonymous" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-qrcode/1.0/jquery.qrcode.min.js"></script>
+
+        <!-- jQuery Library (required for the QR code plugin) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- QR Code Generator (jQuery QR Code Plugin) -->
+        <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+        
+        <!-- html2pdf.js Library (for generating PDF) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+    <title>Pan Card </title>
+    <style>
+        @font-face {
+  font-family: "OCR-B";
+  src: url(https://cdn.jsdelivr.net/gh/raisty/OCR-B/dist/OCR-B.ttf) format("truetype"),
+       url(https://cdn.jsdelivr.net/gh/raisty/OCR-B/dist/OCR-B.otf) format("opentype");
+}
+
+        .btns_P{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .btns_P button{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+        <nav id="navv">
+        <ul>
+            <li><a href="adhar.html" class="download-btn">
+        Adhar Card
+    </a></li>
+            <li><a href="pan.html" class="download-btn">
+        Pan Card
+    </a></li>
+              </ul>
+         </nav>
+    <br>
+    <h1 align="center" <span style="color: white;">🇮🇳 Welcome 🇮🇳</span>
+</h1>
+
+    <form action="" id="fromC" onsubmit="return sender()">
+        <div class="main_div" id="md">
+            <div class="sub_container">
+                <div class="from_container">
+                        <form>
+                            <div class="form-group">
+                                <label for="panCardNo">Pan Card No <span style="color: red;">*</span></label>
+                                <input type="text" id="panCardNo" name="panCardNo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="name_pan">Name <span style="color: red;">*</span></label>
+                                <input type="text" id="name_pan" name="name_pan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherName_pan">Father Name <span style="color: red;">*</span></label>
+                                <input type="text" id="fatherName_pan" name="fatherName_pan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dateOfBirth_pan">Date Of Birth <span style="color: red;">*</span></label>
+                                <input type="date" id="dateOfBirth_pan" name="dateOfBirth_pan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender_pan">Gender <span style="color: red;">*</span></label>
+                                <select id="gender_pan" name="gender_pan" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="signature" >Select Signature <span style="color: red;">*</span></label>
+                                <input type="file" id="signature" name="signature" accept="image/*" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="image_pan">Select Image <span style="color: red;">*</span></label>
+                                <input type="file" id="image_pan" name="image_pan" accept="image/*" required>
+                            </div>
+
+                            <div class="btns_P">
+                                <button type="reset" id="clear_pan">Clear</button>
+                                <button type="submit" id="submit_pan">Generate</button>
+                                
+                            </div>
+                        </form>
+                        
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <div id="panDisplay" >
+<div class="pan_img_div" id="pan_div_d">
+        <img id="pan_card" src="blank_pan.jpg" alt="">
+        <div class="pan_structer">
+         <div class="pan_top">
+            <p id="top_pan_number_show">mbCDE1234h</p>
+<p id="top_name_show">Indu sharma</p>
+<p id="top_fater_name_show">harihar sharma</p>
+<p id="top_dob_show">05/07/1990</p>
+<p id="top_gnder_show">Female</p>
+<img id="top_pan_signature_show" src="signature.png" alt="">
+<div id="top_qrshow"></div>
+<img src="images/man.jpg"  id="top_pan_man_img" alt="">
+         </div>
+         <div class="pan_bottom">
+<img src="images/man.jpg"  id="pan_man_img" alt="">
+<div class="pan_details">
+    <p id="pan_name_show">Indu sharma</p>
+    <p id="fatharname_pan_show">harihar sharma</p>
+    <p id="dob_pan_show">05/07/1990</p>
+    <p id="pan_number_show">mbCDE1234h</p>
+    <p id="pan_qr_show"></p>
+   
+    <!-- <p id="pan_signature_show"></p> -->
+    <img id="pan_signature_show" src="signature.png" alt="">
+</div>
+         </div>
+        </div>
+</div>
+<div class="pan_btnss">
+    <button id="downlode_btn" class="buffering">Download</button>
+    <div id="bufferingIcon"  class="buffering"></div>
+    <button id="pan_edit">Edit</button>
+
+</div>
+    </div>
+    <script src="pan.js"></script>
+    <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+    <script src="sender.js"></script>
+
+</body>
+</html>

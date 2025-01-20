@@ -1,0 +1,808 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, sans-serif; */
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    background-color: #0A1F44;
+}
+
+
+
+p {
+    font-size: 14px; /* Example font size */
+}
+
+
+.main_div{
+    width: 100%;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sub_container{
+    width: 80%;
+    height: auto;
+
+}
+.from_container{
+
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-column-gap: 20px;
+color: rgba(0, 0, 0, 0.774);
+}
+
+.main_div{
+    /* border: 1px solid red; */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1E3B70;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+input{
+    font-size: 15px;
+}
+
+input[type="file"] {
+
+    width: 100%;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1E3B70;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+#pincode{
+    width: 100%;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #1E3B70;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+
+    
+}
+
+
+button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#submit{
+    /* width: 200px; */
+}
+.flex_around{
+    display: flex;
+align-items: center;
+justify-content: space-between;
+}
+button:hover {
+    background-color: #3e8e41;
+}
+
+
+.adhar_display{
+    width: 100%;
+    height: 100vh;
+    background: #000000b0;
+    position: absolute;
+    top: 0px;
+left: 0px;
+display: none;
+
+
+}
+.adhar_card_show_div{
+    width: 718.11px;
+    height:  1046.93px;
+/* position: relative; */
+
+
+    margin: 50px auto;
+    padding: 20px;
+
+    border-radius: 10px;
+    /* background-color: #f9f9f9; */
+    text-align: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+.adhar {
+    height:  1046.93px;
+    width: 718.11px;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    /* border: 1px solid rgb(0, 38, 255); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.data_structer{
+    width: 100%;
+    height:  auto;
+/* border: 1px solid red; */
+
+}
+
+#adhardemo_img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    
+    }
+    
+
+.show_data_sturcter{
+
+
+
+position: absolute;
+top: 74px;
+left: 5px;
+width: 710px;
+height:  84.1%;
+overflow: hidden;
+}
+
+
+
+
+
+.downlode_div{
+    width: auto;
+    height: 100%;
+ position: absolute;
+ bottom: -450px
+ ;
+ right: 40px;
+}
+.downlode_div button{
+margin-bottom: 50px;
+
+margin-left: 20px;
+}
+#arrow_icon{
+    cursor: pointer;
+    width: 40px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+
+
+.adhar_top_details_div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+#aadhaarCard_top_info{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    overflow: hidden;
+
+
+}
+
+.adjust_info{
+    /* border: 2px solid red; */
+}
+
+
+
+
+.details_top_show{
+    width: 220px;
+    height: auto;
+position: absolute;
+top: 270px;
+left: 68px;
+text-align: left;
+
+}
+
+.details_top_show p{
+    font-size: 10px;
+    font-weight: 300;
+
+}
+#enrollment_no{
+    font-size: 12.3px;
+    font-weight: 300;
+    font-weight: 400;
+    position: absolute;
+    top: 240px;
+left: 31px;
+
+}
+
+.signature_text{
+    width: 57px;
+    margin-top: 70px;
+    margin-left: 4px;
+
+}
+.signature_text p {
+    font-size: 4.2px;
+    font-weight: 300
+} 
+
+.top_bottom_details{
+width: 130px;
+height:130Px;
+position: absolute;
+top: 415px;
+right: 15Px;
+
+}
+
+#qr_show{
+  width: 100%;
+  height: 100%;
+ /* margin-right: 5px; */
+ /* overflow: hidden; */
+ image-rendering: crisp-edges;
+
+}
+
+.adhar_number_show_div{
+
+    width: 100%;
+    height:160px;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+
+
+
+}
+.main_adhar_front{
+    width: 100%;
+    height: 100%;
+position: relative;
+
+}
+#adhar_number_show_big{
+    font-size: 22px;
+ /* border: 1px solid red; */
+ position: absolute;
+ bottom:270px;
+ left: 100px;
+ 
+
+}
+
+#img_show{
+    width: 60px;  /* 3.5 cm = approximately 140 px */
+    height: 65px; /* 4.5 cm = approximately 180 px */
+    object-fit: cover;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+  
+}
+.details_adhar_front{
+    /* border: 1px solid red; */
+
+    position: absolute;
+    top: 5px;
+    left: 95px;
+text-align: left;
+}
+
+.details_adhar_front p{
+    font-size: 10px;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+}
+#adhar_number_show_front{
+    position: absolute;
+    bottom:0px;
+    left:120px;
+    font-size: 19px;
+    /* border: 1px solid red; */
+}
+
+
+/* .main_adhar_back{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    border: 2px solid rgb(44, 32, 218);
+} */
+
+.secend_side_adhar{
+    width: 50%;
+    height: 170px;
+    position: absolute;
+    bottom:20px;
+    right: 5px;
+overflow: hidden; 
+}
+
+.secend_side_details{
+width: 100%;
+height: 100%;
+position: relative;
+
+
+}
+.addres_in_secend{
+    width: 55%;
+    /* padding: 3px; */
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    text-align: left;
+
+
+
+}
+.addres_in_secend p {
+    font-size: 10px;
+
+    /* text-align: justify; */
+}
+.bold{
+    font-weight: bold;
+    font-size: 6.5px;
+}
+.ad_magin{
+    margin-top:8px;
+}
+#last_adhar_number_show{
+    text-align: center;
+    font-size: 19px;
+
+    position: absolute;
+    bottom: 0px;
+left: 120px;
+/* border: 1px solid red; */
+
+}
+
+
+
+#final_qr_show{
+width: 100px;
+height: 100px;
+    position: absolute;
+    top: 10px;
+    right: 0px; 
+/* overflow: hidden; */
+image-rendering:crisp-edges;
+
+} 
+
+
+#first_page_qr{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 25px;
+    right: 20px; 
+overflow: hidden;
+image-rendering:crisp-edges;
+/* border:1px solid red; */
+}
+
+
+#final_qr_show,#first_page_qr,#qr_show{
+    padding: 5px;
+    /* background: #ffffff; */
+}
+
+
+/* spiner */
+
+.spinner {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 5px; /* Add some space between spinner and text */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* nav */
+
+
+
+
+
+  /* General styling for the navigation bar */
+  
+#navv {
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  /* Remove default list styling */
+  
+  #navv ul {
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+  
+  #navv ul li {
+    display: inline-block;
+    margin-right: 30px;
+    padding: 5px 20px;
+
+  }
+  
+  /* Style for the links */
+  
+  #navv ul li a {
+    background-color: #ff0a00; /* Green */
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for the links */
+  #navv ul li a:hover {
+    background-color: ##ffc700; 
+    
+    
+  }
+  
+
+  /* pan card csss  */
+
+#panDisplay{
+    width: 100%;
+    height: 100vh;
+    background: rgba(12, 8, 0, 0.432);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.pan_img_div{
+    width: 718.11px;
+    height:  1046.93px;
+    /* border:1px solid red; */
+    overflow: hidden;
+    position: relative;
+    margin-left: 30px;
+    margin-top: 20px;
+
+}
+#pan_card{
+    width: 100%;
+    height: 100%;
+}
+.pan_structer{
+    width: 718.11px;
+    height:  1046.93px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pan_top{
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 510px;
+    position: relative;
+    text-transform: uppercase;
+}
+.pan_top p {
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-size: 28px; */
+
+}
+#top_pan_number_show{
+    position: absolute;
+    top: 170px;
+    left: 315px;
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+#top_name_show{
+    position: absolute;
+    top: 220px;
+    left: 215px;
+}
+#top_fater_name_show{
+    position: absolute;
+    top: 265px;
+    left: 215px;
+}
+#top_dob_show{
+    position: absolute;
+    top: 305px;
+    left: 215px;
+}
+#top_gnder_show{
+    position: absolute;
+    top: 350px;
+    left: 215px;
+}
+
+#top_pan_signature_show{
+    width: 195px;
+    height: 85px;
+    position: absolute;
+    top: 380px;
+    left: 203px;
+}
+
+#top_pan_man_img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    position: absolute;
+    top: 400px;
+    left: 50px;
+}
+
+#top_qrshow{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 403px;
+    right: 190px;
+   
+}
+  .pan_bottom{
+    width: 93%;
+    height: 200px;
+    position: absolute;
+    bottom: 19px;
+    left: 26px;
+    text-transform: uppercase;
+
+  }
+  #pan_man_img{
+    width: 42px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 52px;
+    left: 15px;
+  }
+  .pan_details p{
+font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    font-weight: bold;
+  }
+#pan_name_show{
+    position: absolute;
+    top: 117px;
+    left: 14px;
+}
+
+#fatharname_pan_show{
+    position: absolute;
+    top: 143px;
+    left: 14px;
+}
+
+#dob_pan_show{
+    position: absolute;
+    top: 175px;
+    left: 15px;
+}
+
+#pan_number_show{
+    position: absolute;
+    top: 75px;
+    left: 93px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#pan_qr_show{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 59px;
+    left: 211px;
+}
+
+#pan_signature_show{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    bottom:15px;
+    left: 110px;
+
+
+
+}
+
+
+
+.pan_btnss{
+    position: absolute;
+    right: 50px;
+    top: 310px;
+
+}
+
+.pan_btnss button{
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+  /* pan card css  end  */
+
+
+
+
+
+
+/* responsive  */
+
+
+
+/* Mobile screens (up to 600px) */
+@media screen and (max-width: 600px) {
+    .from_container {
+        grid-template-columns: 1fr; /* Stack form elements vertically */
+    }
+
+    .sub_container {
+        width: 85%;
+        overflow: scroll;
+    }
+
+    input, select, textarea, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+.downlode_div {
+    width: auto;
+    height: 100%;   
+    position: absolute;
+    bottom: -670px;
+    right: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.downlode_div button{
+    width:auto;
+    padding: 10px 20px;
+
+
+    }
+
+    #arrow_icon{
+        cursor: pointer;
+        width: 40px;
+        position: absolute;
+        top:20px;
+        left: 50px;
+    }
+    /* adhar start  */
+
+#panDisplay{
+width: 100%;
+height: 100vh;
+overflow: scroll;
+}
+
+.pan_btnss button{
+    margin-left: 10px;
+    /* width: 100%;
+    padding: 10px 35px; */
+}
+.pan_btnss {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    /* border: 1px solid red; */
+    height: 100vh;
+
+    display: flex;
+    align-items:end;
+    justify-content: end;
+}
+
+}
